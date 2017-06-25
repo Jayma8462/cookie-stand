@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css?family=Raleway');
 body {
   display: block;
   margin-left: auto;
@@ -43,4 +44,16 @@ a:hover {
 }
 #aboutUsMainBody {
   text-align: none;
+}
+h1 {
+  font-family: 'Raleway', 'san-serif';
+  font-weight: bold;
+  background-color: #add0ee;
+}
+#aboutUsMainBody p {
+  text-indent: 50px;
+  font-family: 'Georgia';
+}
+#missionStatement {
+  font-family: 'Georgia';
 }

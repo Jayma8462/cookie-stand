@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css?family=Raleway');
 body {
   display: block;
   margin-left: auto;
@@ -37,6 +38,8 @@ a:hover {
   length: 960px;
   height: auto;
 }
-table, th,td, tr {
-  border: 2px solid black;
+p {
+  font-family: 'Raleway', 'san-serif';
+  font-weight: bold;
+    background-color: #add0ee;
 }
