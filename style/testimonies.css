@@ -55,3 +55,7 @@ a:hover {
   margin-top: 10px;
   margin-left: 10px;
 }
+p {
+  font-family: 'Georgia';
+  font-weight: normal;
+}
