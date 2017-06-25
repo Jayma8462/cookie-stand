@@ -1,4 +1,3 @@
-debugger;
 var imgTest = ["photos/counter.jpg", "photos/fishcookies2.png", "photos/muffins.jpg", "photos/deserts.jpg", "photos/rolls.jpg"];
 var imgBoxTest = ['--ib1width', '--ib2width', '--ib3width', '--ib4width', '--ib5width'];
 var imgBoxTest2 = ['--ib1height', '--ib2height', '--ib3height', '--ib4height', '--ib5height'];

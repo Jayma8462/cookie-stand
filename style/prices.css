@@ -37,3 +37,6 @@ a:hover {
   length: 960px;
   height: auto;
 }
+table, th,td, tr {
+  border: 2px solid black;
+}
