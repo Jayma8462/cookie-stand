@@ -15,11 +15,13 @@ function StoreData(name, minCx, maxCx, avgCookies) {
   this.minCx = minCx;
   this.maxCx = maxCx;
   this.cookiesPerHour = [];
+  this.totalPerStore = 0;
   var hour = ['6am','7am','8am','9am','10am','11am','12pm','1pm','2pm','3pm','4pm','5pm','6pm','7pm'];
   for (var i = 0; i < hour.length; i++){
     var ranNum = Math.floor(Math.random() * (this.maxCx - this.minCx)) + this.minCx;
     var cphPush = Math.round(ranNum * this.avgCookies);
     this.cookiesPerHour.push(cphPush);
+    this.totalPerStore += this.cookiesPerHour[i];
   }
 }
 function totalCookies(hour, stores) {
@@ -36,18 +38,30 @@ function totalCookies(hour, stores) {
 }
 totalCookies(hour, stores);
 window.onload = function(stores) {
+  var hour = [' ', '6am','7am','8am','9am','10am','11am','12pm','1pm','2pm','3pm','4pm','5pm','6pm','7pm'];
   var stores = [fapStore, saStore, scStore, chStore, aStore];
-  var listEl = document.getElementById('generated-table');
-  var createNewList = document.createElement('ul');
-  var createListEl = document.createElement('li');
+  var tableEl = document.getElementById('generated-table');
+  for (var j = 0; j < hour.length; j++){
+    var createTableHeaderEl = document.createElement('th');
+    createTableHeaderEl.textContent = hour[j];
+    tableEl.appendChild(createTableHeaderEl);
+  }
   for (var i = 0; i < stores.length; i++){
-    var storeEl = document.createElement('p');
-    storeEl.textContent = stores[i].name;
-    listEl.appendChild(storeEl);
-    for (var j = 0; j < hour.length; j++){
-      var createEl = document.createElement('li');
-      createEl.textContent = hour[j] + ": " + stores[i].cookiesPerHour[j];
-      listEl.appendChild(createEl);
+    var createTableRowEl = document.createElement('tr');
+    createTableRowEl.textContent = stores[i].name;
+    tableEl.appendChild(createTableRowEl);
+    for (var j = 0; j < hour.length - 1; j++){
+      var createTableDataEl = document.createElement('td');
+      createTableDataEl.textContent = stores[i].cookiesPerHour[j];
+      createTableRowEl.appendChild(createTableDataEl);
     }
+  }
+  var createTableFooterEl = document.createElement('tfoot');
+  createTableFooterEl.textContent = "Totals";
+  tableEl.appendChild(createTableFooterEl);
+  for (var i = 0; i < hour.length - 1; i++){
+    var createFooterDataEl = document.createElement('td');
+    createFooterDataEl.textContent = totalCookiesPerHour[i];
+    createTableFooterEl.appendChild(createFooterDataEl);
   }
 }
