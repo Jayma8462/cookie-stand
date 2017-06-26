@@ -19,6 +19,28 @@
   <div id="Sales"><a href="sales.html">Sale</a></div>
 </div>
   <div id="mainBody">
+    <form id="form">
+      <fieldset>
+        <legend>New Store Data:</legend>
+        <div>
+          <label for="storeName">Store Name:</label>
+          <input id="store-name" type="text" name="storeName" placeholder="I.E. Store Location" required>
+          <label for="storeShortName">Store Short Name:</label>
+          <input id="store-short-name" type="text" name="storeShortName" placeholder="No spaces, No num, no charaters" required>
+        </div>
+        <div>
+          <label for="minCxCount">Minimum Customer:</label>
+          <input id="min-cx-count" type="number" name="minCxCount" placeholder="Number" required>
+          <label for="maxCxCount">Maximum Customer:</label>
+          <input id="max-cx-count" type="number" name="maxCxCount" placeholder="Number" required>
+          <label for="avgCookieCount">Average Cookies:</label>
+          <input id="avg-Cookie-Count" type="number" name="avgCookieCount" placeholder="Number" required>
+        </div>
+        <div>
+          <input type="submit" value="Submit Data">
+        </div>
+      </fieldset>
+    </form>
     <ul id="generated-table">
 
     </ul>

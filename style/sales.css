@@ -1,0 +1,39 @@
+body {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: #eecbad;
+  width: 960px;
+}
+#header {
+  height: 246px;
+  length: 960px;
+  border: 2px solid green;
+  margin-left: auto;
+}
+#header img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+#navbar {
+  length: 960px;
+  background-color: black;
+}
+a {
+  color: white
+}
+a:hover {
+  color: #ff9999
+}
+#customerReviews {
+  border: 2px solid black;
+}
+#Home, #Prices, #AboutUs, #Direction, #Testimonies, #Sales {
+  display: inline-block;
+  background-color: black;
+}
+#mainBody {
+  length: 960px;
+  height: auto;
+}

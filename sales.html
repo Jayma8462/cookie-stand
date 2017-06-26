@@ -1,9 +1,19 @@
 <!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+
+  </body>
+</html>
 <head>
   <title>Pat's Cookie Stand</title>
-  <link rel="stylesheet" type="text/css" href="style/style.css" />
+  <link rel="stylesheet" type="text/css" href="style/sales.css" />
 </head>
 <body>
+
 <div id="header">
   <img src="photos/salmon.png" alt="Logo">
 </div>
@@ -15,3 +25,63 @@
   <div id="Testimonies"><a href="testimonies.html">Testimonies</a></div>
   <div id="Sales"><a href="sales.html">Sale</a></div>
 </div>
+
+<form id="form">
+  <fieldset>
+    <legend>Place Order:</legend>
+
+    <div>
+      <label for="custName">Customer Name:</label>
+      <input id="cust-name-input" type="text" name="custName" placeholder="First and Last" required>
+    </div>
+
+    <div>
+      <label for="custAdd">Address:</label>
+      <input type="text" name="custAdd" value="" required>
+
+      <label for="pickup">Pick up?</label>
+      <input type="checkbox" checked />
+
+        <div style="display:none;" id="checked-a">
+          //lets try this from here.
+          <label for="select-location">Where would you like to pick them up?</label>
+          <select id="select-location">
+            <option>Choose a store</option>
+          </select>
+        </div>
+        <input type="hidden" id="hdn1" value="yes" />
+    </div>
+<br>
+    <div>
+      <label for="city">City:</label>
+      <input type="text" name="city" value="">
+      <labels for="state">State:</label>
+      <input type="text" name="State" value="ST" maxlength="2">
+      <labels for="zip">Zip:</label>
+      <input type="number" name="Zip" value="" maxlength="5">
+    </div>
+
+    <div>
+      <label for="Cookies">Which cookie would you like?</label>
+      <select name="Cookies">
+        <option value="blank"></option>
+        <option value="king">Iced King</option>
+        <option value="pacific">Peanut Butter Pacific</option>
+        <option value="coho">Coho Crunch</option>
+        <option value="humpy">Honey Graham Humpy</option>
+      </select>
+      <label for="quantity">How many?</label>
+      <input id="myInput" type="number" min="0" name="quantity" value="" required>
+      <input type="submit" value="Submit Order">
+    </div>
+
+  </fieldset>
+</form>
+<table id="orders-table">
+<tr>
+
+</tr>
+</table>
+<script type="text/javascript" src="javascript/sales.js"></script>
+</body>
+</html>
