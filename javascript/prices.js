@@ -1,4 +1,7 @@
 'use strict'
+
+
+
 var fapStore = new StoreData('First and Pike', 23, 65, 6.3);
 var saStore = new StoreData('Seatac Airport', 3, 24, 1.2);
 var scStore = new StoreData('Seattle Center', 11, 38, 3.7);
