@@ -41,5 +41,23 @@ a:hover {
 p {
   font-family: 'Raleway', 'san-serif';
   font-weight: bold;
-    background-color: #add0ee;
+  background-color: #add0ee;
+}
+th, td, tr {
+  font-family: 'Raleway', 'san-serif';
+  border: 1px solid black;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+th {
+  color: white;
+  background-color: black;
+}
+td {
+  color: Black;
+  text-align: center;
+  background-color: #add0ee;
+}
+tfoot, tfoot td {
+  background-color: yellow;
 }
